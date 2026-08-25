@@ -29,7 +29,8 @@ multiline_func_header = "params_first"
 
 # setURL matches the ccip-tools / SetUrlDialog ABI (not mixedCase).
 # Packed keccak256 is the ENS Labs gateway preimage; must not be rewritten as assembly.
+# Signature expiry is defined against block.timestamp (EIP-3668 / Labs verifier).
 [lint]
-exclude_lints = ["mixed-case-function", "asm-keccak256"]
+exclude_lints = ["mixed-case-function", "asm-keccak256", "block-timestamp"]
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
