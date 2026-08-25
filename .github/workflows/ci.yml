@@ -10,3 +10,5 @@ on:
 jobs:
   ci:
     uses: qntx/workflows/.github/workflows/ci-foundry.yml@main
+    with:
+      foundry-version: stable
