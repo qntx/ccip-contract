@@ -7,8 +7,15 @@ on:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   ci:
-    uses: qntx/workflows/.github/workflows/ci-foundry.yml@main
+    uses: qntx/workflows/.github/workflows/ci-foundry.yml@v2
+    permissions:
+      contents: read
     with:
       foundry-version: stable
+      submodules: true
+      foundry-profile: default
