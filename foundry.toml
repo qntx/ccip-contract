@@ -31,6 +31,9 @@ multiline_func_header = "params_first"
 # Packed keccak256 is the ENS Labs gateway preimage; must not be rewritten as assembly.
 # Signature expiry is defined against block.timestamp (EIP-3668 / Labs verifier).
 [lint]
+# CI / Foundry runs forge fmt + forge build --sizes + forge test.
+# Newer stable forge lints on build; that is outside the reusable workflow contract.
+lint_on_build = false
 exclude_lints = ["mixed-case-function", "asm-keccak256", "block-timestamp"]
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
